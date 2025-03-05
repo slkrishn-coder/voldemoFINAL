@@ -32,24 +32,24 @@ This AI-powered volunteer allocation system uses machine learning models to opti
 
 ## **Installation & Setup**
 ### **1. Clone the Repository**
-```bash
+
 git clone https://github.com/YOUR_GITHUB_USERNAME/VolunteerCloudApp.git
 cd VolunteerCloudApp
 ```
 
 ### **2. Create a Virtual Environment**
-```bash
+=
 python -m venv myenv
 myenv\Scripts\activate  # For Windows
 ```
 
 ### **3. Install Dependencies**
-```bash
+
 pip install -r requirements.txt
 ```
 
 ### **4. Run the Streamlit App**
-```bash
+=
 streamlit run app.py
 ```
 This will launch the application in your browser.
