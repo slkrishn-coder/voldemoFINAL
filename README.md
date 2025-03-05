@@ -1,80 +1,43 @@
-# **README for AI-Powered Volunteer Allocation System**
+# Volunteer Allocation System  
 
-## **Overview**  
-This AI-powered volunteer allocation system uses machine learning models to optimize volunteer assignments based on experience level, task urgency, and past engagement. The system predicts volunteer expertise and assigns them tasks that best match their skills, preventing burnout and improving retention.
+## Overview  
+This app assigns volunteers to tasks based on their experience and past activity. It uses AI to predict skill levels and match volunteers to the best opportunities.  
 
----
+## How to Install and Run  
 
-## **Features**
-- **AI-Driven Volunteer Matching**  
-  - Uses RandomForestClassifier to classify volunteers into four experience levels:  
-    - **Beginner** → 0-10 tasks  
-    - **Intermediate** → 11-30 tasks  
-    - **Mentor** → 31-50 tasks  
-    - **Site Leader** → 51+ tasks  
+1. Clone the repository:  
 
-- **Task Fit Scoring**  
-  - Uses XGBRegressor to assign volunteers a fit score (0 to 1) based on:  
-    - Task urgency  
-    - Past engagement  
-    - Completion rates  
-
-- **Dynamic Task Assignment**  
-  - High urgency tasks → Assigned to Site Leaders & Mentors  
-  - Medium urgency tasks → Assigned to Intermediate volunteers  
-  - Low urgency tasks → Assigned to Beginners for skill-building  
-
-- **Burnout Prevention & Reallocation**  
-  - Volunteers nearing disengagement are reassigned to lower-stress projects  
-  - Dropout risks are detected using engagement trends  
-
----
-
-## **Installation & Setup**
-### **1. Clone the Repository**
-
+```
 git clone https://github.com/YOUR_GITHUB_USERNAME/VolunteerCloudApp.git
 cd VolunteerCloudApp
 ```
 
-### **2. Create a Virtual Environment**
-=
+2. Create a virtual environment:  
+
+```
 python -m venv myenv
-myenv\Scripts\activate  # For Windows
+myenv\Scripts\activate  # Windows
 ```
 
-### **3. Install Dependencies**
+3. Install required libraries:  
 
+```
 pip install -r requirements.txt
 ```
 
-### **4. Run the Streamlit App**
-=
+4. Run the app:  
+
+```
 streamlit run app.py
 ```
-This will launch the application in your browser.
 
----
+## How It Works  
+- The app predicts a volunteer’s experience level.  
+- It assigns tasks based on urgency and fit.  
+- Volunteers see their recommended tasks in the app.  
 
-## **How It Works**
-1. Data is generated to simulate volunteer engagement using NumPy.  
-2. RandomForestClassifier predicts experience level.  
-3. XGBRegressor calculates a fit score for task matching.  
-4. Volunteers select their ID in the Streamlit UI and receive a task recommendation.  
-5. Progress bars and alerts guide users on their assignments.  
-
----
-
-## **Technologies Used**
+## Technologies  
 - Python  
 - Streamlit  
-- Pandas & NumPy  
-- Scikit-learn (RandomForestClassifier)  
-- XGBoost (XGBRegressor)  
-
----
-
-## **Future Enhancements**
-- Expand AI models to incorporate volunteer feedback and task ratings  
-- Deploy app online using Streamlit Cloud for easy access  
-- Integrate real-world volunteer datasets for improved accuracy  
+- Pandas, NumPy  
+- Scikit-learn, XGBoost  
